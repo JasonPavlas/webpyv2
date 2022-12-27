@@ -74,28 +74,13 @@ WSGI_APPLICATION = 'webpy.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'dev': {
-        'ENGINE': DB_ENGINE,
-        'NAME': DB_NAME,
-        'USER': DB_USER,
-        'PASSWORD': DB_PASSWOED,
-        'HOST': DB_HOST,
-    },
-
-    'test': {
-        'ENGINE': DB_ENGINE,
-        'NAME': DB_NAME,
-        'USER': DB_USER,
-        'PASSWORD': DB_PASSWOED,
-        'HOST': DB_HOST,
-    },
-
-    'prod': {
-        'ENGINE': DB_ENGINE,
-        'NAME': DB_NAME,
-        'USER': DB_USER,
-        'PASSWORD': DB_PASSWOED,
-        'HOST': DB_HOST,
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'jasonpavlas',
+        'USER': 'jasonpavlas',
+        'PASSWORD': 'testing321',
+        'HOST': '127.0.0.1',
+        'PORT': '5433',
     }
 }
 
@@ -124,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'EST'
 
 USE_I18N = True
 
